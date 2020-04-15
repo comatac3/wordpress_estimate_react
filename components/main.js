@@ -31,7 +31,7 @@ const Createlay = (props) => {
 
 	function setupCanvas(canvas) {
 		// Get the device pixel ratio, falling back to 1.
-		var dpr = window.devicePixelRatio || 0;
+		let dpr = window.devicePixelRatio || 0;
 		// Get the size of the canvas in CSS pixels.
 		//var rect = canvas.getBoundingClientRect();
 		// Give the canvas pixel dimensions of their CSS
@@ -361,6 +361,13 @@ const Createlay = (props) => {
 	var rText = parseFloat((y / ratio).toFixed(10)) + ' cm.';
 	ctx.font = '20px Georgia';
 	ctx.fillText(rText, 0, 0);
+	ctx.restore();
+
+	const image = document.getElementById('source');
+
+	console.log(image);
+
+	ctx.drawImage(image, 250, 100, 500, 500);
 	ctx.restore();
 
 	return null;

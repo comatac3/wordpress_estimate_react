@@ -353,6 +353,13 @@ const Createlay = () => {
 	ctx.fillText(rText, 0, 0);
 	ctx.restore();
 
+	const image = document.getElementById('source');
+	console.log(image);
+
+	image.addEventListener('load', (e) => {
+		ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
+	});
+
 	return null;
 };
 

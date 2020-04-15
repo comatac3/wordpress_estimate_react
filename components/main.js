@@ -1,15 +1,15 @@
 const Unfsize = (props) => {
 	let unf_x = props.data.a * 2 + props.data.b * 2 + 1.5;
-	let unf_y = props.data.b * 2 + props.data.c * 2 + 1.5;
+	let unf_y = props.data.b + props.data.c * 2 + 1.5 * 2;
 	return (
 		<div className="col-12">
-			ขนาดกางออก = {unf_x} x {unf_y}
+			ขนาดกางออก = {unf_y} x {unf_x}
 		</div>
 	);
 };
 
 const Createlay = (props) => {
-	var peek = 1.3;
+	var peek = 1.5;
 	var yy = props.data.c;
 	var zz = props.data.b;
 	var xx = props.data.a;
@@ -308,35 +308,35 @@ const Createlay = (props) => {
 	ctx.restore();
 
 	//line 3
-	ctx.beginPath();
-	ctx.moveTo(startx + p, 30);
-	ctx.lineTo(startx + p, 40);
-	ctx.lineTo(startx + p + x, 40);
-	ctx.lineTo(startx + p + x, 30);
-	ctx.strokeStyle = 'green';
-	ctx.stroke();
+	// ctx.beginPath();
+	// ctx.moveTo(startx + p, 30);
+	// ctx.lineTo(startx + p, 40);
+	// ctx.lineTo(startx + p + x, 40);
+	// ctx.lineTo(startx + p + x, 30);
+	// ctx.strokeStyle = 'green';
+	// ctx.stroke();
 
-	ctx.beginPath();
-	ctx.save();
-	ctx.translate(startx + p + x / 2, 40);
-	//ctx.rotate(-0.5*Math.PI);
+	// ctx.beginPath();
+	// ctx.save();
+	// ctx.translate(startx + p + x / 2, 40);
+	// //ctx.rotate(-0.5*Math.PI);
 
-	var rText = parseFloat((x / ratio).toFixed(10)) + ' cm.';
-	ctx.font = '20px Georgia';
-	ctx.fillText(rText, 0, 0);
-	ctx.restore();
+	// var rText = parseFloat((x / ratio).toFixed(10)) + ' cm.';
+	// ctx.font = '20px Georgia';
+	// ctx.fillText(rText, 0, 0);
+	// ctx.restore();
 
 	//line 4
-	ctx.beginPath();
-	ctx.moveTo(startx + p + x, 40);
-	ctx.lineTo(startx + p + x + z, 40);
-	ctx.lineTo(startx + p + x + z, 30);
-	ctx.strokeStyle = 'green';
-	ctx.stroke();
+	// ctx.beginPath();
+	// ctx.moveTo(startx + p + x, 40);
+	// ctx.lineTo(startx + p + x + z, 40);
+	// ctx.lineTo(startx + p + x + z, 30);
+	// ctx.strokeStyle = 'green';
+	// ctx.stroke();
 
-	ctx.beginPath();
-	ctx.save();
-	ctx.translate(startx + p + x + z / 2, 40);
+	// ctx.beginPath();
+	// ctx.save();
+	// ctx.translate(startx + p + x + z / 2, 40);
 	//ctx.rotate(-0.5*Math.PI);
 
 	var rText = parseFloat((z / ratio).toFixed(10)) + ' cm.';
@@ -345,23 +345,23 @@ const Createlay = (props) => {
 	ctx.restore();
 
 	//line 5
-	ctx.beginPath();
-	ctx.moveTo(startx + p + 2 * x + 2 * z + 20 + 10, starty + p + z);
-	ctx.lineTo(startx + p + 2 * x + 2 * z + 20, starty + p + z);
-	ctx.lineTo(startx + p + 2 * x + 2 * z + 20, starty + p + z + y);
-	ctx.lineTo(startx + p + 2 * x + 2 * z + 20 + 10, starty + p + z + y);
-	ctx.strokeStyle = 'red';
-	ctx.stroke();
+	// ctx.beginPath();
+	// ctx.moveTo(startx + p + 2 * x + 2 * z + 20 + 10, starty + p + z);
+	// ctx.lineTo(startx + p + 2 * x + 2 * z + 20, starty + p + z);
+	// ctx.lineTo(startx + p + 2 * x + 2 * z + 20, starty + p + z + y);
+	// ctx.lineTo(startx + p + 2 * x + 2 * z + 20 + 10, starty + p + z + y);
+	// ctx.strokeStyle = 'red';
+	// ctx.stroke();
 
-	ctx.beginPath();
-	ctx.save();
-	ctx.translate(startx + p + 2 * x + 2 * z + 20 + 5, starty + p + z + y / 2);
-	ctx.rotate(0.5 * Math.PI);
+	// ctx.beginPath();
+	// ctx.save();
+	// ctx.translate(startx + p + 2 * x + 2 * z + 20 + 5, starty + p + z + y / 2);
+	// ctx.rotate(0.5 * Math.PI);
 
-	var rText = parseFloat((y / ratio).toFixed(10)) + ' cm.';
-	ctx.font = '20px Georgia';
-	ctx.fillText(rText, 0, 0);
-	ctx.restore();
+	// var rText = parseFloat((y / ratio).toFixed(10)) + ' cm.';
+	// ctx.font = '20px Georgia';
+	// ctx.fillText(rText, 0, 0);
+	// ctx.restore();
 
 	const image = document.getElementById('source');
 
